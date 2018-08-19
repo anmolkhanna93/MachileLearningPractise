@@ -1,0 +1,63 @@
+LinearRegression
+
+1. Not a very useful also for classification but good for predicting continuous value spectrum
+
+2. So if we have 3 input features x1, x2 and x3 and output is y
+
+Then our function will be something like y = m1x1 + m2 x2 + m3 x3 + b
+
+b is a constant
+
+So they are linearly dependent and also we can change how much dependent they are by varying the values of m1, m2 and m3 and b
+ 
+3.
+From the training data, we need a way to calculate m1, m2, m3, m4 and b
+
+Common error measure forms: 
+Sensitivity and specificity are statistical measures of the performance of a binary classification test, also known in statistics as classification function.
+
+Median absolute deviation
+
+4
+If the value of any regression coefficient is zero, then two variables are: independent
+
+5.
+
+Coefficient of determination
+
+Till now to determine how good or bad the algorithm is performing, we were
+Just drawing a line to see how the points are scattered.This is not a good approach.
+We need some way of objectively coming to a conclusion, say some score. For this purpose, 
+We will be using Coefficient of determination.
+
+Its given as score = 1 - (u/v)
+Where u is Sum((Y(True) - Y(Prdeicted))^2) for all the data points
+      v is sum((Y(True)- Mean(Y(True)))^2)
+
+This ensures that the score is between 0 and 1.It can be negative also and higher the score the better.
+
+The above expression basically mean we are comparing the error with the worst possible scenario that we assume that for all input X the output is mean(Y(True)). Then in this case u and v will become equal and the score will be 0. Which is the worst case
+
+The score will be negative when we are doing the predictions worst than the mean because then u > v
+
+tHe best case is when y(predicted) = y(True), the score will be 1
+
+6. 
+
+Cost Function // error function
+
+// Important lecture, see it again
+
+7. Optimal Coefficient 
+
+
+
+
+
+
+
+
+
+
+
+
