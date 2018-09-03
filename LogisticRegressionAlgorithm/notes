@@ -1,0 +1,59 @@
+1.  Lecture 1
+
+Logistic Regression is primarily used for classification problems while Linear
+Regression is used for predicting the values. We cant use linear regression for classification
+problems as it gives you continuous values.
+
+The decision boundary is a boundary where all values to one side belong to one class and
+all the values to the other class belong to the other class
+
+The decision boundary can be a linear or non linear decision boundary
+
+Why Linear Regression cant be used for classification ?
+
+1. Few outliers, will make our model inefficient
+2. Also, it gives continuous values as output which is not needed for the classification 
+problems. i.e it will give values where some will be less than 0 and some greater than 1 but
+for classification problem we require predicted value to be between 0 and 1.
+
+2. Lecture 2
+
+Logistic Regression Algorithm : Its a classification Algorithm
+
+Sigmoid Function: S(x) = 1 / 1 + (e^(-x)) 
+
+So, As x -> - infinity
+		e ^ (-x) -> Infinity
+		and S(x) -> 0
+	
+	As, x -> Infinity
+		e ^ (-x) -> - infinity which equals 0
+		So s(x) -> 1
+
+In logistic regression, the output say h(x) will be 
+
+h(x) = 1 / (1 + e^(-g(x)))
+ where g(x) = m * x + c // linear regression line
+ 
+3. Lecture 3
+
+ cost function:
+ 
+ Convex Function: One having only 1 local minima
+ 
+ We want a cost function which is a convex function such that we only have one local minima.
+ This is the reason we cant use the cost function from linear regression as there we have
+ many local minimas
+ 
+4. Multi Class Logistic Regression:
+
+There are two ways to handle this:
+A. one vs rest approach : Here the classes are independent of each other and each class has
+its own model
+B. Multinomial: Here all the classes are considered as dependent and we only have one model
+and the class with highest probability is chosen as the output
+
+5. Finding complex boundaries
+
+In L2 Regularization, we do the square of parameters
+In L1 Regularization, we take the modulus of parameters
