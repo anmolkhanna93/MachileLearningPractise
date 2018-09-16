@@ -45,3 +45,20 @@ The feature that gives DeltaGini as max will be picked up for the split
 
 Gini Index favors classes that are balanced and as pure as possible
 
+6. Decision Trees and overfitting
+
+A. Try to simplify the decision tree by stopping early
+Two ways:
+- Define max depth for the tree
+	-Problems: 1. how to choose the max depth. 
+			   2. In some cases we might only want to grow a tree along one branch and not
+			   on the other, but using max depth it wont be possible as it forces balance
+			   on both sides
+			   
+- Stop when you dont get any significant improvements in the score. Score can be any of 
+the metrics discussed above.
+	-Problems: 1. Like in XOR case, it might stop before splitting later on
+
+B. Build the whole tree and do pruning to get rid of the bad splits
+
+7. Pruning: we will be using # leafs to prune the tree. cost = error + lambda * #leafs
