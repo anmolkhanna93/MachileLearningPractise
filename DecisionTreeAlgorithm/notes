@@ -1,0 +1,10 @@
+Decision Trees
+
+1. We will be using a greedy approach for our algorithm at each step to determine the
+best feature to split upon. There are many different metrics that we can use for our purpose,
+like accuracy, information gain, Gain ratio, Gini Index
+
+2. Now, if instead of discrete values, we have a continuous set of values for our features,
+how do we tackle them. We need to have some way of categorizing the values, that is values 
+less than threshold belong to one category and values greater than threshold belong to the
+other category
