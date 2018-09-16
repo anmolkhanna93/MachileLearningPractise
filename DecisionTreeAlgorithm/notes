@@ -6,5 +6,42 @@ like accuracy, information gain, Gain ratio, Gini Index
 
 2. Now, if instead of discrete values, we have a continuous set of values for our features,
 how do we tackle them. We need to have some way of categorizing the values, that is values 
-less than threshold belong to one category and values greater than threshold belong to the
-other category
+less than threshold belong to one category and values greater than threshold belong to the other category
+
+3. Information Gain:
+
+Entropy/Info Reqd = - * Sum(P(ith class) * log (P(ith class)))
+
+We want to choose a class where we have the max decrease in the value of Entropy
+
+The more impurities we have in our dataset the more is the value of entropy
+
+The problem with info gain is that it tends to focus on features that gives a very small
+info gain with a lot of nodes
+
+4. Gain Ratio:
+
+Gain Ratio = Info Gain / Split info
+For 2 splits 
+Split Info = - |D1|/D * log (|D1|/D) - |D2|/D * log (|D2|/D)
+
+
+
+5 Gini Index:
+
+Gini Index for a class = 1 - Sum(P(ith Class)^2)
+
+Gini Index generally leads to binary splits. 
+
+Gini Index for a split is given as weighted average ,i.e.
+
+|D1|/D * GiniIndexforD1 + |D2|/D * GiniIndexForD2+ -----
+
+Higher the Gini Index: more are the impurities and therefore lower the gini index,the better
+
+Delta Gini = OriginalGiniForD - GiniForASplitFonD
+
+The feature that gives DeltaGini as max will be picked up for the split
+
+Gini Index favors classes that are balanced and as pure as possible
+
